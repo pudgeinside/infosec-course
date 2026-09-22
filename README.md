@@ -135,3 +135,18 @@ curl http://localhost:8080/api/data \
 - Входные данные ограничены строгой маской для `username` (XSS-векторы вида
   `<script>` не проходят валидацию) и проверены на соответствие формату `email`.
 
+## Скриншоты отчетов
+### До исправления уязвимостей:
+### SAST
+![img.png](img/sast1_before.png)
+![img.png](img/sast2_before.png)
+### SCA
+![img.png](img/sca1_before.png)
+![img.png](img/sca2_before.png)
+
+### После исправления уязвимостей:
+### SAST
+![img.png](img/sast1_after.png)
+![img.png](img/sast2_after.png)
+### SCA
+![img.png](img/sca_after.png)

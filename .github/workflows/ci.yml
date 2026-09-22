@@ -62,6 +62,12 @@ jobs:
           java-version: '25'
           cache: maven
 
+      - name: Cache Dependency-Check database
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository/org/owasp/dependency-check-data
+          key: dc-data-${{ runner.os }}
+
       - name: Run OWASP Dependency-Check
         run: ./mvnw -B org.owasp:dependency-check-maven:13.0.0:check
 
